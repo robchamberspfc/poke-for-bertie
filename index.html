@@ -34,7 +34,7 @@
 <body>
     <nav class="title navbar navbar-expand-lg">
         <div class="container-fluid text-centre">
-            <h2 class="title">Pokemon for Bertie</h2>
+            <h2 class="title">Pokemon for <span id="name">Bertie</span></h2>
 
         </div>
     </nav>
@@ -72,6 +72,13 @@
                 document.getElementById('pokemonName').innerHTML = data.name
             })
     }
+
+    let URL = window.location.href
+    let name = URL.split("?name=")[1]
+    if (name != null) {
+        document.getElementById("name").innerHTML = name
+    }
+
 </script>
 
 </head>
